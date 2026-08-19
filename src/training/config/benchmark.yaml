@@ -1,0 +1,20 @@
+# Danh sách model cần benchmark
+detection_models:
+  - "yolov8n.pt"
+  - "yolov8s.pt"
+  - "yolov8m.pt"
+  - "yolov10n.pt"
+  - "yolov11n.pt"
+
+classification_models:
+  - "resnet18"
+  - "resnet34"
+  - "mobilenet_v3_small"
+  - "efficientnet_b0"
+
+# Cấu hình chung cho benchmark
+benchmark:
+  epochs: 10               # Chỉ train 10 epochs để lấy kết quả nhanh
+  dataset_detection_yaml: "dataset_final_detection/data.yaml"  # Chú ý đường dẫn thực tế
+  dataset_classification_dir: "dataset_final_classification"   # Thư mục gốc của dataset
+  save_dir: "output/benchmark_results"

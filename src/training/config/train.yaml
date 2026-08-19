@@ -1,0 +1,21 @@
+# Đường dẫn data
+dataset_detection_yaml: "dataset_final_detection/data.yaml"
+dataset_classification_dir: "dataset_final_classification"
+
+# Cấu hình Train Detection
+detection:
+  epochs: 80
+  batch: 16
+  imgsz: 640
+  device: 0               # 0 = GPU, 'cpu' = CPU
+
+# Cấu hình Train Classification
+classification:
+  epochs: 80
+  batch: 32
+  lr: 0.0005
+  img_size: 224
+
+# Output lưu model
+save_weights_dir: "output/weights"
+save_logs_dir: "output/logs"
